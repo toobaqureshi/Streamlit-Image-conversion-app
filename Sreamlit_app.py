@@ -77,12 +77,12 @@ def main():
 
 			# two columns to display the original image and the 
 			# image after applying water color sketching effect 
-			tab1 , tab2 = st.tabs(["Water color", "Sketch"]) 
-			with tab1: 
+			col1 , col2 = st.tabs(["Water color", "Sketch"]) 
+			with col1: 
 				st.header("Original Image") 
 				st.image(load_an_image(image_file), width=250) 
 
-			with tab2: 
+			with col2: 
 				st.header("Water Color Sketch") 
 				st.image(im_pil, width=250) 
 				buf = BytesIO() 
